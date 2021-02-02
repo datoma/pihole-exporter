@@ -209,7 +209,7 @@ pipeline {
     always {
       archiveArtifacts artifacts: '*.txt', onlyIfSuccessful: true
       sh "docker rmi ${DOCKERHUB_IMAGE_NAME}:latest"
-      sh "docker rmi ${DOCKERHUB_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+      //sh "docker rmi ${DOCKERHUB_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
     }
     success {
       script {
